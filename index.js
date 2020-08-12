@@ -5,7 +5,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/network')
+mongoose.connect('mongodb+srv://kushal:ish123tyle456@cluster0.tsjcf.mongodb.net/network?retryWrites=true&w=majority')
     .catch(function(err){
         console.log(err);
     })
@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/network')
 });
 
 
-var Network = require('./models//network');
+var Network = require('./models/network');
 const { Router } = require('express');
 
 app.use(express.json())
