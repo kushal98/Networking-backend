@@ -17,13 +17,13 @@ mongoose.connect('mongodb+srv://kushal:ish123tyle456@cluster0.tsjcf.mongodb.net/
 var Network = require('./models/network');
 const { Router } = require('express');
 
-app.use(express.json())
-app.use(bodyParser.urlencoded({extended : true}))
+app.use(express.json());
+app.use(bodyParser.urlencoded({extended : true}));
 
 var port = process.env.port || 8080;
 
 
-var router = Router()
+var router = Router();
 
 router.use(function(req, res, next) {
     console.log('Something is happening.');
@@ -31,7 +31,7 @@ router.use(function(req, res, next) {
 });
 
 router.get('/' , function(req , res){
-    res.json({message : 'hello! welcome to the local social network'})
+    res.json({message : 'hello! welcome to the local social network'});
 });
 
 router.route('/network').post( function(req, res){
@@ -47,7 +47,7 @@ router.route('/network').post( function(req, res){
                 res.send(err);
             }
 
-            res.send({message : 'Person saved successfully'})
+            res.send({message : 'Person saved successfully'});
         })
     })
     .get( function(req , res){
