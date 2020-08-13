@@ -20,7 +20,7 @@ const { Router } = require('express');
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended : true}));
 
-var port = process.env.port || 8080;
+var port = process.env.PORT || 8080;
 
 
 var router = Router();
